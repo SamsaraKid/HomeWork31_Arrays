@@ -82,10 +82,10 @@ owners = []
 
 # генерация случайного списка владельцев
 for i in range(len(numbers)):
-    num_owners = rand(1, 5)
+    num_owners = rand(1, len(people))
     own = []
     while len(own) < num_owners:
-        rand_owner_num = rand(0, 4)
+        rand_owner_num = rand(0, len(people) - 1)
         rand_owner = people[rand_owner_num]
         if rand_owner not in own:
             own.append(rand_owner)
@@ -95,7 +95,7 @@ for i in range(len(numbers)):
 registry = list(zip(marks, numbers, owners))
 
 
-# вывод ассортимента машин со списком владельцев
+# вывод ассортимента авто со списком владельцев
 def print_cars():
     print('Вот что есть в наличии:')
     for i in registry:
