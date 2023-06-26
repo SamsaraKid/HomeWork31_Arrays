@@ -143,10 +143,7 @@ while True:
                 mark = input('Введите модель продаваемого авто:\n')
                 num = input('Введите регистрационный номер авто:\n')
                 own = tuple(input('Введите через пробел бывших владельцев авто:\n').split())
-                marks.append(mark)
-                numbers.append(num)
-                owners.append(own)
-                registry = list(zip(marks, numbers, owners))
+                registry.append((mark, num, own))
                 print('Сделка заключена, поздравляем!')
             case 4:  # поиск авто
                 num = input('Введите номер для поиска:\n')
